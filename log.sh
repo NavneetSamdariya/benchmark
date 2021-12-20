@@ -1,5 +1,5 @@
 #!/bin/bash
-command |& tee -a output.txt
+command |& tee -a benchlog.txt
 sysbench --test=cpu run
 sysbench --test=memory run
 sysbench --test=fileio --file-test-mode=seqwr run
